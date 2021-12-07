@@ -153,8 +153,13 @@ footer {
 	height: 20px;
 	background-color: rgba(0, 255, 255, 0.521);
 	margin-top: 110px;
-	
-
+	display: flex;
+}
+.tombol-daftar1 {
+	width: 10%;
+	height: 20px;
+	background-color: rgba(0, 255, 255, 0.521);
+	margin-top: 110px;
 }
 .button {
 	color: white;

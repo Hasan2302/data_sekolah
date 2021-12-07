@@ -29,7 +29,7 @@
 			<tr>
 				<td></td>
 				<td></td>
-				<td><input type="submit" value="LOGIN"></td>
+				<td><input type="submit" value="DAFTAR"></td>
 			</tr>
 		</table>
 	</form> <br>

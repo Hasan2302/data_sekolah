@@ -5,7 +5,7 @@
 <html>
 <head>
 	<title>halo</title>
-	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
 </head>
 <body>
 <nav>
@@ -30,19 +30,15 @@ if(isset($_GET['cari'])){
 		<div class="formtop">
 		<h3>TABEL MAHASISWA</h3>
 		</div> <hr>
-		
-		<a href="tambah_siswa.php"><input type="button" value="Tambah" align="left" class="button2"></a>
 		<div class="div-tabel">
 		<table class="tabel" cellspacing="10">
 		<tr align="left">
 			<th><h3>NO</h3></th>
-			<th><h3>NIS</h3></th>
 			<th><h3>NAMA</h3></th>
 			<th><h3>JK</h3></th>
-			<th><h3>ALAMAT</h3></th>
 			<th><h3></h3></th>
 		</tr>
-		<?php
+<?php
 	if(isset($_GET['cari'])){
 		$cari = $_GET['cari'];
 		$sql = mysqli_query($db_link, "select * from tb_mahasiswa where nama_mahasiswa like '%".$cari."%'");		
@@ -55,15 +51,10 @@ if(isset($_GET['cari'])){
 ?>
 	<tr>
 		<td><?php echo $no;?></td>
-		<td><?php echo "$data[nis_mahasiswa]" ;?></td>
 		<td><?php echo "$data[nama_mahasiswa]" ;?></td>
 		<td><?php echo "$data[jk_mahasiswa]" ;?></td>
-		<td><?php echo "$data[alamat_mahasiswa]" ;?></td>
-
-		<td>
-		<a href="edit_siswa.php?nis_mahasiswa=<?php echo $data['nis_mahasiswa'] ;?>"><input type="button" value="edit" class="button1"></a>
-		<a href="hapus_siswa.php?nis_mahasiswa=<?php echo $data['nis_mahasiswa'] ;?>"><input type="button" value="hapus" class="button"></a>
-		</td>
+		<td align="right"><a href="info_siswa.php?nis_mahasiswa=<?php echo $data['nis_mahasiswa'];?>"><input type="button" value="info" class="button2"></a></td>
+		
 		<?php $no++;
 	}
 	?>

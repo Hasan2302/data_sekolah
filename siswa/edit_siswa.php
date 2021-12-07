@@ -4,12 +4,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	<title>home</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <nav>
-
+	<h1>SELAMAT DATANG</h1>
 </nav>
 <a href="../index.php"><input type="button" value="Log Out" class="cardnav"></a>
 <a href="home.php"><input type="button" value="Home" class="cardnav"></a>
@@ -35,6 +35,7 @@
 		</tr>
 <?php
 $no=1;
+$nis_mahasiswa=$_GET['nis_mahasiswa'];
 $sql="SELECT * FROM tb_mahasiswa";
 $query=mysqli_query($db_link, $sql);
 while ($data = mysqli_fetch_array($query))
@@ -46,11 +47,8 @@ while ($data = mysqli_fetch_array($query))
 		<td><?php echo "$data[nama_mahasiswa]" ;?></td>
 		<td><?php echo "$data[jk_mahasiswa]" ;?></td>
 		<td><?php echo "$data[alamat_mahasiswa]" ;?></td>
+		<td align="right"><a href="info_siswa.php?nis_mahasiswa=<?php echo $data['nis_mahasiswa'];?>"><input type="button" value="info" class="button2"></a></td>
 
-		<td>
-		<a href="edit_siswa.php?nis_mahasiswa=<?php echo $data['nis_mahasiswa'] ;?>"><input type="button" value="edit" class="button1"></a>
-		<a href="hapus_siswa.php?nis_mahasiswa=<?php echo $data['nis_mahasiswa'] ;?>"><input type="button" value="hapus" class="button"></a>
-		</td>
 		<?php $no++;
 	}
 	?>
@@ -59,26 +57,19 @@ while ($data = mysqli_fetch_array($query))
 </div>
 </div>
 <?php
-$carikode = mysqli_query($db_link, "select max(nis_mahasiswa) from tb_mahasiswa") or die (mysqli_error);
-$datakode = mysqli_fetch_array($carikode);
-if($datakode) {
-	$nilaikode = substr($datakode[0], 1);
-	$kode = (int) $nilaikode;
-	$kode = $kode + 1;
-	$hasilkode = "s".str_pad($kode, 2, "0", STR_PAD_LEFT);
-} else {
-	$hasilkode = "s01";
-}
-?>
+	$nis_mahasiswa=$_GET['nis_mahasiswa'];
+	$sql2="SELECT * FROM tb_mahasiswa WHERE nis_mahasiswa='$nis_mahasiswa'";
+	$query=mysqli_query($db_link, $sql2);
+	$data=mysqli_fetch_array($query);?>
 <div class="formcard4">
-	<h3>TAMBAH DATA SISWA</h3> <br>
-	<form action="aksitambah_siswa.php" method="POST">	
+	<h3>EDIT DATA SISWA</h3>
+	<form action="aksiedit_siswa.php" method="POST">
 			<label>nis</label><br>
-			<input type="text" name="nis_mahasiswa" value="<?php echo $hasilkode; ?>" readonly><br>
+			<input type="text" name="nis_mahasiswa" value="<?php echo "$data[nis_mahasiswa]" ;?>" readonly/><br>
 			<label>nama</label><br>
-			<input type="text" name="nama_mahasiswa"><br>
+			<input type="text" name="nama_mahasiswa" value="<?php echo "$data[nama_mahasiswa]" ;?>"><br>
 			<label>alamat</label><br>
-			<input type="text" name="alamat_mahasiswa"><br>
+			<input type="text" name="alamat_mahasiswa" value="<?php echo "$data[alamat_mahasiswa]" ;?>"><br>
 			<input type="radio" name="jk_mahasiswa" value="pria"> pria
 			<input type="radio" name="jk_mahasiswa" value="wanita"> wanita<br>
 

@@ -112,11 +112,12 @@ footer {
 }
 .fm4 {
 	border-radius: 8px;
-	width: 80%; 
+	box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.5);
+	width: 100%;
+	margin-left: 30px;
+	height: 430px;
 	padding-top: 10px;
 	background-color: white;
-	text-align: left;
-	margin-left: 20px;
 }
 .formcard5 {
 	border-radius: 8px;
@@ -143,7 +144,7 @@ footer {
 	box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.5);
 	width: 26%;
 	margin: 80px 0px 0px 500px;
-	height: 430px;
+	height: 295px;
 	padding-top: 10px;
 	background: linear-gradient(to top, #ffffff 0%, #fafafa80 100%);
 	text-align: center;
@@ -155,6 +156,12 @@ footer {
 	margin-top: 110px;
 	
 
+}
+.tombol-daftar1 {
+	width: 10%;
+	height: 20px;
+	background-color: rgba(0, 255, 255, 0.521);
+	margin-top: 110px;
 }
 .button {
 	color: white;

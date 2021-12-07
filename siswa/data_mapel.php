@@ -5,9 +5,10 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
 </head>
 <body>
+<nav>
 <nav>
 <form action="" method="get">
 	<input class="cari" type="text" name="cari" placeholder="cari..">
@@ -30,8 +31,6 @@ if(isset($_GET['cari'])){
 	<div class="formtop">	
 		<h3>TABEL MAPEL</h3>
 	</div> <hr>
-	
-	<a href="tambah_mapel.php"><input type="button" value="Tambah" class="button2"></a>
 	<div class="div-tabel">
 	<table class="tabel" cellspacing="10" border="0">
 		<tr align="left">
@@ -40,7 +39,7 @@ if(isset($_GET['cari'])){
 			<th>NAMA MAPEL</th>
 			<th></th>
 		</tr>
-		<?php
+<?php
 	if(isset($_GET['cari'])){
 		$cari = $_GET['cari'];
 		$sql = mysqli_query($db_link, "select * from tb_mapel where nama_mapel like '%".$cari."%'");		
@@ -55,11 +54,6 @@ if(isset($_GET['cari'])){
 			<td><?php echo $no ;?></td>
 			<td><?php echo "$data[id_mapel]" ;?></td>
 			<td><?php echo "$data[nama_mapel]" ;?></td>
-
-			<td>
-			<a href="edit_mapel.php?id_mapel=<?php echo $data['id_mapel'];?>"><input type="button" value="edit" class="button1"></a>
-			<a href="hapus_mapel.php?id_mapel=<?php echo $data['id_mapel'];?>"><input type="button" value="hapus" class="button"></a>
-			</td>
 			<?php $no++;
 		}
 		?>

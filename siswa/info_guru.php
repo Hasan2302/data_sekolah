@@ -6,11 +6,21 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
 </head>
 <body>
 	<nav>
-
+	<nav>
+<form action="" method="get">
+	<input class="cari" type="text" name="cari" placeholder="cari..">
+	<input class="cari2" type="submit" value="Cari">
+</form>
+ 
+<?php 
+if(isset($_GET['cari'])){
+	$cari = $_GET['cari'];
+}
+?>
 	</nav>
 	<a href="../index.php"><input type="button" value="Log Out" class="cardnav"></a>
 	<a href="home.php"><input type="button" value="Home" class="cardnav"></a>

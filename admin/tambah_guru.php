@@ -5,11 +5,11 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style3.css">
 </head>
 <body>
 <nav>
-	<h1>SELAMAT DATANG</h1>
+
 </nav>
 <a href="../index.php"><input type="button" value="Log Out" class="cardnav"></a>
 <a href="home.php"><input type="button" value="Home" class="cardnav"></a>

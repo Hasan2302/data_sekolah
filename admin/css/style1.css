@@ -1,8 +1,6 @@
 *{margin: 0px; padding: 0px;}
 nav {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	text-align: center;
+	height: 50px;
 	font-family: sans-serif;
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 	background-color: white;
@@ -35,6 +33,23 @@ footer {
 	/* text-align: center; */
 	background-color: white;
 	margin: 10px 0px 10px 10px;
+}
+.cari {
+	border-radius: 8px;
+	width: 700px;
+	height: 30px;
+	margin: 10px;
+	/* text-align: center; */
+	background-color: white;
+}
+.cari2 {
+	border-radius: 8px;
+	width: 100px;
+	height: 30px;
+	margin: 10px;
+	/* text-align: center; */
+	background-color: black;
+	color: white;
 }
 .formtop {
 	box-shadow: 1px 2px rgba(0, 0, 0, 0);
@@ -94,6 +109,14 @@ footer {
 	padding-top: 10px;
 	background-color: white;
 	text-align: center;
+}
+.fm4 {
+	border-radius: 8px;
+	width: 80%; 
+	padding-top: 10px;
+	background-color: white;
+	text-align: left;
+	margin-left: 20px;
 }
 .formcard5 {
 	border-radius: 8px;

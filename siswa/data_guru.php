@@ -5,7 +5,7 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
 </head>
 <body>
 <nav>
@@ -30,7 +30,6 @@ if(isset($_GET['cari'])){
 		<div class="formtop">
 			<h3>TABEL GURU</h3>
 		</div> <hr>
-		<a href="tambah_guru.php"><input type="button" value="Tambah" class="button2"></a>
 		<div class="div-tabel">
 		<table class="tabel" cellspacing="10">
 			<tr align="left">
@@ -42,7 +41,7 @@ if(isset($_GET['cari'])){
 				<th><h3></h3></th>
 				<th><h3></h3></th>
 			</tr>
-			<?php
+<?php
 	if(isset($_GET['cari'])){
 		$cari = $_GET['cari'];
 		$sql = mysqli_query($db_link, "select * from tb_guru where nama_guru like '%".$cari."%'");		
@@ -59,12 +58,6 @@ if(isset($_GET['cari'])){
 			<td><?php echo "$data[nama_guru]" ;?></td>
 			<td><?php echo "$data[jk]" ;?></td>
 			<td><?php echo "$data[alamat]" ;?></td>
-			<td align="right"><a href="info_guru.php?kode_guru=<?php echo $data['kode_guru'];?>"><input type="button" value="info" class="button2"></a></td>
-
-			<td>
-			<a href="edit_guru.php?kode_guru=<?php echo $data['kode_guru'];?>"><input type="button" value="edit" class="button1"></a>
-			<a href="hapus_guru.php?kode_guru=<?php echo $data['kode_guru'];?>"><input type="button" value="hapus" class="button"></a>
-			</td>
 			<?php $no++;
 		}
 		?>

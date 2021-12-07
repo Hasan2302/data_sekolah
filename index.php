@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Login Admin</title>
-    <link rel="stylesheet" href="admin/css/style.css">
+    <link rel="stylesheet" href="admin/css/login.css">
 </head>
 <body>
     <div class="login">
@@ -29,7 +29,10 @@
 			</tr>
 		</table>
 	</form> <br>
-	<a href="admin/daftar.php"><input type="submit" class="tombol-daftar" value="Daftar"></a>
+	<div class="tombol-daftar">
+	<a href="admin/daftar.php"><input type="submit" class="tombol-daftar1" value="Daftar Admin"></a>
+	<a href="siswa/data_siswa.php"><input type="submit" class="tombol-daftar1" value="Masuk Sebagai Siswa"></a>
+	</div>
     </div>
 
 </body>
