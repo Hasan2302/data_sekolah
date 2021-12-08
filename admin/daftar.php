@@ -5,7 +5,7 @@
 <html>
 <head>
 	<title>halo</title>
-	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/login1.css">
 </head>
 <body>
 <div class="login">
