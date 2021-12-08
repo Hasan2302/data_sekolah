@@ -5,7 +5,7 @@
 <html>
 <head>
 	<title>halo</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
 <div class="login">
@@ -33,7 +33,7 @@
 			</tr>
 		</table>
 	</form> <br>
-	<a href="../index.php"><input type="submit" value="back" class="tombol-daftar"></a>
+	<a href="../index.php"><input type="submit" value="back" class="tombol-daftar3"></a>
 </div>
 </body>
 </html>
