@@ -34,6 +34,7 @@ if(isset($_GET['cari'])){
 		<table class="tabel" cellspacing="10">
 		<tr align="left">
 			<th><h3>NO</h3></th>
+			<th><h3>NIS</h3></th>
 			<th><h3>NAMA</h3></th>
 			<th><h3>JK</h3></th>
 			<th><h3></h3></th>
@@ -51,6 +52,7 @@ if(isset($_GET['cari'])){
 ?>
 	<tr>
 		<td><?php echo $no;?></td>
+		<td><?php echo "$data[nis_mahasiswa]" ;?></td>
 		<td><?php echo "$data[nama_mahasiswa]" ;?></td>
 		<td><?php echo "$data[jk_mahasiswa]" ;?></td>
 		<td align="right"><a href="info_siswa.php?nis_mahasiswa=<?php echo $data['nis_mahasiswa'];?>"><input type="button" value="info" class="button2"></a></td>

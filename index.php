@@ -31,7 +31,7 @@
 	</form> <br>
 	<div class="tombol-daftar">
 	<a href="admin/daftar.php"><input type="submit" class="tombol-daftar1" value="Daftar Admin"></a>
-	<a href="siswa/data_siswa.php"><input type="submit" class="tombol-daftar1" value="Masuk Sebagai Siswa"></a>
+	<a href="login_siswa.php"><input type="submit" class="tombol-daftar1" value="Masuk Sebagai Siswa"></a>
 	</div>
     </div>
 
